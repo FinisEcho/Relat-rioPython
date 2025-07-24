@@ -20,52 +20,64 @@ execute:
   message: false
 reference-location: margin
 citation-location: margin
-#bibliography: references.bib
+bibliography: references.bib
 self-contained-math: true
 embed-resources: true
 ---
 
-1. blablabla
-- alguma coisa 
-**muita coisa** 
-*italico*
-```bash
-git --version
-```
-`git` é uma blablablu
+# Introdução:
 
-# Explicar brevemente os seguintes tópicos:
+A adoção de ferramentas que facilitam e automatizam o trabalho é essencial para otimizar processos, especialmente em áreas que envolvem programação. Durante as aulas, foi apresentado o **Git** e o **GitHub**, ferramentas fundamentais para organização e versionamento de código. Essas tecnologias são amplamente utilizadas por desenvolvedores e têm grande relevância também para estatísticos que trabalham com programação, pois permitem o controle eficiente de projetos, colaboração em equipe e armazenamento em nuvem.
+
+Além disso, o Git e o GitHub serão utilizados ao longo da disciplina como suporte para o aprendizado de **Python**, uma linguagem de programação amplamente aplicada em análise de dados e estatística. Este relatório aborda os pontos-chave dessas ferramentas e introduz conceitos básicos de Python.
 
 ## Git e GitHub:
 
-1. O que são;
+1.  Uma breve história do Git
 
-2. Para que servem;
+2.  O que são;
 
-3. Comandos básicos: git init, git add, git commit, git push, git pull, git clone;
+3.  Para que servem;
 
-4. O que é um repositório e um commit.
+4.  Comandos básicos: git init, git add, git commit, git push, git pull, git clone;
+
+5.  O que é um repositório e um commit.
 
 ## pip:
 
-1. O que é o pip;
+1.  O que é o pip;
 
-2. Como instalar pacotes com pip install;
+2.  Como instalar pacotes com pip install;
 
-3. Exemplos de bibliotecas populares: pandas, numpy, matplotlib, requests.
+3.  Exemplos de bibliotecas populares: pandas, numpy, matplotlib, requests.
 
 ## Conceitos iniciais de Python:
 
-1. Tipos de dados: int, float, str, bool;
+1.  Tipos de dados: int, float, str, bool;
 
-2. Variáveis e operadores básicos;
+2.  Variáveis e operadores básicos;
 
-3. Listas, tuplas e dicionários;
+3.  Listas, tuplas e dicionários;
 
-4. Estruturas de controle: if, else, elif, for, while;
+4.  Estruturas de controle: if, else, elif, for, while;
 
-5. Funções: definição com def, parâmetros, retorno;
+5.  Funções: definição com def, parâmetros, retorno;
 
-6. Importação de bibliotecas com import;
+6.  Importação de bibliotecas com import;
 
-7. Boas práticas: comentários, nomes de variáveis, indentação.
+7.  Boas práticas: comentários, nomes de variáveis, indentação.
+
+# Referências
+
+::: {#refs}
+:::
+
+1.  blablabla
+
+-   alguma coisa **muita coisa** *italico*
+
+``` bash
+git --version
+```
+
+`git` é uma blablablu

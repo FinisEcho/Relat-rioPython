@@ -27,23 +27,135 @@ embed-resources: true
 
 # Introdução:
 
-A adoção de ferramentas que facilitam e automatizam o trabalho é essencial para otimizar processos, especialmente em áreas que envolvem programação. Durante as aulas, foi apresentado o **Git** e o **GitHub**, ferramentas fundamentais para organização e versionamento de código. Essas tecnologias são amplamente utilizadas por desenvolvedores e têm grande relevância também para estatísticos que trabalham com programação, pois permitem o controle eficiente de projetos, colaboração em equipe e armazenamento em nuvem.
+Aprender ferramentas que facilitam e automatizam nosso trabalho é sempre importante, durante as aulas foi apresentado para nós uma das principais ferramentas de organização e versionamento dos programadores, o Git e o Github (sistema nuvem do Git), essa ferramenta é de suma importância e é uma ferramenta que se deve levar em toda a jornada acadêmica e profissional de um estatístico que está sempre mexendo com programação. O git e github será utilizados também ao decorrer da cadeira durando os ensinamentos de Python. Vamos ver alguns pontos chave dessa ferramenta e um conteudo inicial de python
 
-Além disso, o Git e o GitHub serão utilizados ao longo da disciplina como suporte para o aprendizado de **Python**, uma linguagem de programação amplamente aplicada em análise de dados e estatística. Este relatório aborda os pontos-chave dessas ferramentas e introduz conceitos básicos de Python.
+# Git e GitHub:
 
-## Git e GitHub:
+## Uma breve história do Git:
 
-1.  Uma breve história do Git
+Em meados de (1991-2002) surgia a necessidade de um processo de colaboração mais eficiente ao invés do processo artesanal de correções em arquivos. Dessa necessidade surgiu o **BitKeeper**, um sistema de controle de versão distribuído, porém, essa solução mais tarde viria a se tornar um problema, em 2005 a **BitKeeper** rompeu com a Linux deixando a ferramenta disponível apenas no modelo pago, Linus Torvald e seus colaboradores incontentes com a situação se viram determinados a contruir algo novo para substituir o **BitKeeper** e superar o mesmo, esse algo seria o **Git.** Mais tarde o que começou como uma resposta imediata a ruptura da BitKeep se tornou uma ferramente dominante de controle de versão.
 
-2.  O que são;
+## Uma breve história do Github:
 
-3.  Para que servem;
+O **GitHub** nasceu em **2008**, criado por Tom Preston-Werner, Chris Wanstrath e PJ Hyett, três desenvolvedores que queriam tornar o Git mais acessível e colaborativo.
 
-4.  Comandos básicos: git init, git add, git commit, git push, git pull, git clone;
+Eles perceberam que, embora o **Git** fosse poderoso, faltava uma plataforma intuitiva para:
 
-5.  O que é um repositório e um commit.
+-   **Hospedar** repositórios
 
-## pip:
+-   **Facilitar** colaboração em equipe
+
+-   **Popularizar** o controle de versão
+
+### **Curiosidades:**
+
+-   Em **2010**, já tinha **1 milhão de repositórios**.
+
+-   Em **2012**, o **Facebook** e o **Google** adotaram o GitHub.
+
+-   Em **2018**, a **Microsoft comprou o GitHub por US\$ 7,5 bilhões** – mas manteve-o aberto e independente.
+
+## O que são:
+
+### Git:
+
+O **Git** é um sistema de controle de versão distribuído projetado para rastrear mudanças em arquivos e organizar o trabalho entre várias pessoas.
+
+Ao contrário de outros sistemas de versionamento (como Subversion ou CVS), que armazenam arquivos como uma lista de alterações (deltas), o **Git** trata os dados como um conjunto de snapshots (fotos do estado dos arquivos em um determinado momento). Cada vez que você faz um commit, o **Git** tira uma "foto" dos arquivos e armazena uma referência a esse estado.
+
+A maioria das operações no **Git** são feitas localmente, sem precisar de internet. Você pode ver o histórico, criar branches, fazer commits e reverter alterações sem depender de um servidor remoto.
+
+Tudo no Git é **verificado por um checksum (hash SHA-1)** antes de ser armazenado. Isso significa que é impossível alterar um arquivo ou histórico sem que o Git detecte. Cada arquivo e commit é identificado por um **código único de 40 caracteres** (ex: **`24b9da655...`**).
+
+### Github:
+
+O **GitHub** é uma plataforma baseada em nuvem em que é possível armazenar, compartilhar e trabalhar com outras pessoas para escrever códigos.
+
+Ao armazenar códigos em um "repositório" no GitHub é possível:
+
+-   **Demonstrar ou compartilhar** seu trabalho.
+
+-   **Acompanhar e gerenciar** alterações no código ao longo do tempo.
+
+-   Permitir que outras pessoas **revisem** o seu código e deem sugestões para melhorá-lo.
+
+-   **Colaborar** em um projeto compartilhado sem se preocupar que suas alterações afetarão o trabalho de seus colaboradores antes que você esteja pronto para integrá-los.
+
+O trabalho colaborativo, uma das características fundamentais do **GitHub**, é possível graças ao software de código aberto **Git**, que serviu como base para a criação do **GitHub**.
+
+## Para que servem:
+
+Como mencionado anteriormente, o Git e o GitHub servem como ferramentas complementares para controle de versão e colaboração em projetos. Enquanto o **Git** atua como sistema de versionamento local, rastreando alterações no código-fonte de maneira eficiente e segura, o **GitHub** funciona como plataforma de hospedagem em nuvem que potencializa os recursos do Git, adicionando funcionalidades colaborativas.
+
+Dessa forma, Git e GitHub, quando utilizados em conjunto, proporcionam um ambiente robusto e eficiente para o gerenciamento de projetos de software, garantindo rastreabilidade, segurança e colaboração simplificada.
+
+## Comandos básicos:
+
+1.  **`git init`**
+
+    -   Esse é o comando incial, ele cria a pasta `.git` que tem todos os arquivos para criar um repositório dentro na pasta do projeto.
+
+2.  **`git add`**
+
+    -   O `git add` tem duas funções principais:
+
+        -   Começa a **rastrear arquivos** novos (monitorar os arquivos).
+
+        -   **Prepara as alterações** de arquivos ja existentes, marca como "staged" (preparado).
+
+3.  **`git commit`**
+
+    -   Ele cria um **registro permanente** no histórico do Git, permitindo que você volte a essa versão quando quiser. É como tirar uma "foto" do seu projeto naquele momentos, guardando todas as alterações preparadas no `git add`.
+
+4.  **`git push`**
+
+    -   O `git push` é o comando que **envia** seus commits locais para um repositório remoto (como GitHub).
+
+5.  **`git pull`**
+
+    -   O `git pull` é o comando que **sincroniza** seu repositório local com as alterações mais recentes do repositório remoto (GitHub, GitLab, etc.). Ele combina duas operações:
+
+        -   `git fetch`: Baixa as alterações do remoto.
+
+        -   `git merge`: Integra essas alterações no seu branch local.
+
+6.  **`git clone`**
+
+    -   O `git clone` é o comando que **cria uma cópia local** de um repositório Git remoto (como do GitHub, GitLab ou Bitbucket). Ele é usado quando você quer:
+
+        -   Trabalhar em um projeto existente (que está na nuvem).
+
+        -   Contribuir para um projeto open-source.
+
+        -   Iniciar um projeto baseado em um template.
+
+## Repositório, commit e brach:
+
+### Repositório:
+
+Um repositório é o elemento mais básico do **Git** e do **GitHub**. É um lugar onde você pode armazenar seu código, seus arquivos e o histórico de revisão de cada arquivo. Contém **snapshots** (fotos instantâneas) de todos os arquivos em cada versão. Mantém um **histórico completo** de alterações (quem modificou, quando e o que mudou). Permite **ramificação** (*branches*) para desenvolvimento paralelo.
+
+-   **Local**: Armazenado no seu computador (pasta **`.git`**).
+
+-   **Remoto**: Hospedado em plataformas como **GitHub.** Os repositórios podem ter vários colaboradores e podem ser públicos ou particulares.
+
+### Commit:
+
+Um commit **registra alterações** em um ou mais arquivos no seu branch, parecido com salvar um arquivo qualquer que foi editado. O Git atribui a cada commit um **ID exclusivo**, denominado SHA ou hash, que identifica:
+
+-   Cada uma das alterações feitas;
+
+-   O momento em que as alterações foram feitas;
+
+-   O autor das alterações.
+
+Ao fazer um commit, você deve colocar uma mensagem que descreva brevemente as alterações.
+
+### Branch:
+
+É uma linha de desenvolvimento separada, que permite aos desenvolvedores trabalhar em diferentes partes do projeto sem interferir no código principal. É muito usado para fazer testes no aequivo principal ou quando tem vários colaboradores no projeto, assim cada um faz um branch diferente e depois juntam tudo no `main`
+
+# pip:
 
 1.  O que é o pip;
 

@@ -1,7 +1,7 @@
 ---
-title: "1108190 - Análise Exploratória de Dados"
-subtitle: "Introdução à linguagem `R`"
-author: "Professora Doutora Ana Hermínia Andrade e Silva" # Autora
+title: "Relatório Git Github e Python"
+subtitle: "Relatório para a disciplina de softwares estatísticos"
+author: "Daniel Aprígio Santos de Oliveira" # Autora
 lang: pt # Linguagem em português
 date: "`r format(Sys.Date())`" # Data do relatório
 date-format: short # Formato de data curto: dd/MM/yyyy 
@@ -9,13 +9,12 @@ toc: true # Adiciona um índice no relatório
 editor: visual
 format: 
     html: 
-      css: ["custom.css"] 
       code-fold: false
       code-tools: true
       theme: 
         light: cosmo
         dark: superhero # Sugestão: superhero/vapor Mudar o tema do relatório aqui
-title-block-banner: capa.png # Substituir imagem aqui
+#title-block-banner: capa.png # Substituir imagem aqui
 execute:
   warning: false
   message: false
@@ -34,3 +33,39 @@ embed-resources: true
 git --version
 ```
 `git` é uma blablablu
+
+# Explicar brevemente os seguintes tópicos:
+
+## Git e GitHub:
+
+1. O que são;
+
+2. Para que servem;
+
+3. Comandos básicos: git init, git add, git commit, git push, git pull, git clone;
+
+4. O que é um repositório e um commit.
+
+## pip:
+
+1. O que é o pip;
+
+2. Como instalar pacotes com pip install;
+
+3. Exemplos de bibliotecas populares: pandas, numpy, matplotlib, requests.
+
+## Conceitos iniciais de Python:
+
+1. Tipos de dados: int, float, str, bool;
+
+2. Variáveis e operadores básicos;
+
+3. Listas, tuplas e dicionários;
+
+4. Estruturas de controle: if, else, elif, for, while;
+
+5. Funções: definição com def, parâmetros, retorno;
+
+6. Importação de bibliotecas com import;
+
+7. Boas práticas: comentários, nomes de variáveis, indentação.

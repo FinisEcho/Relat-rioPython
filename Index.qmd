@@ -1,0 +1,36 @@
+---
+title: "1108190 - Análise Exploratória de Dados"
+subtitle: "Introdução à linguagem `R`"
+author: "Professora Doutora Ana Hermínia Andrade e Silva" # Autora
+lang: pt # Linguagem em português
+date: "`r format(Sys.Date())`" # Data do relatório
+date-format: short # Formato de data curto: dd/MM/yyyy 
+toc: true # Adiciona um índice no relatório
+editor: visual
+format: 
+    html: 
+      css: ["custom.css"] 
+      code-fold: false
+      code-tools: true
+      theme: 
+        light: cosmo
+        dark: superhero # Sugestão: superhero/vapor Mudar o tema do relatório aqui
+title-block-banner: capa.png # Substituir imagem aqui
+execute:
+  warning: false
+  message: false
+reference-location: margin
+citation-location: margin
+#bibliography: references.bib
+self-contained-math: true
+embed-resources: true
+---
+
+1. blablabla
+- alguma coisa 
+**muita coisa** 
+*italico*
+```bash
+git --version
+```
+`git` é uma blablablu

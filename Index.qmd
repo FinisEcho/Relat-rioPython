@@ -153,31 +153,218 @@ Ao fazer um commit, você deve colocar uma mensagem que descreva brevemente as a
 
 ### Branch:
 
-É uma linha de desenvolvimento separada, que permite aos desenvolvedores trabalhar em diferentes partes do projeto sem interferir no código principal. É muito usado para fazer testes no aequivo principal ou quando tem vários colaboradores no projeto, assim cada um faz um branch diferente e depois juntam tudo no `main`
+É uma linha de desenvolvimento separada, que permite aos desenvolvedores trabalhar em diferentes partes do projeto sem interferir no código principal. É muito usado para fazer testes no aequivo principal ou quando tem vários colaboradores no projeto, assim cada um faz um branch diferente e depois juntam tudo no `main`. Por exemplo:
+
+``` bash
+git branch menu-navegacao    # Cria o branch
+git checkout menu-navegacao  # Entra nele
+```
+
+Mexendo nele:
+
+``` bash
+git add .
+git commit -m "Adiciona menu"
+```
+
+Voltando para o branch principal (main):
+
+``` bash
+git checkout main  # Volta para o branch original
+```
 
 # pip:
 
-1.  O que é o pip;
+O `pip` é o instalador de pacotes padrão do Python. Ele serve para baixar, instalar e gerenciar bibliotecas que não vêm junto com o Python, mas que são muito úteis para desenvolver projetos.
 
-2.  Como instalar pacotes com pip install;
+Com o `pip`, conseguimos acessar milhares de pacotes disponíveis no repositório oficial do Python, o PyPI.
 
-3.  Exemplos de bibliotecas populares: pandas, numpy, matplotlib, requests.
+## Como instalar pacotes com pip:
 
-## Conceitos iniciais de Python:
+Para instalar uma biblioteca com o `pip`, usamos o seguinte comando no terminal ou prompt de comando:
 
-1.  Tipos de dados: int, float, str, bool;
+``` bash
+pip install nome-do-pacote
+```
 
-2.  Variáveis e operadores básicos;
+Por exemplo, para instalar o pacote pandas:
 
-3.  Listas, tuplas e dicionários;
+``` bash
+pip install pandas
+```
 
-4.  Estruturas de controle: if, else, elif, for, while;
+Isso faz com que o pip baixe e instale automaticamente a biblioteca em seu ambiente Python.
 
-5.  Funções: definição com def, parâmetros, retorno;
+## Como atualizar o próprio pip
 
-6.  Importação de bibliotecas com import;
+O pip pode ser atualizado por ele mesmo com o seguinte comando:
 
-7.  Boas práticas: comentários, nomes de variáveis, indentação.
+``` bash
+python -m pip install --upgrade pip
+```
+
+Esse comando usa o próprio Python para rodar o pip como módulo e garantir que ele seja atualizado para a versão mais recente.
+
+## Exemplos de bibliotecas populares
+
+### pandas
+
+Usada para análise e manipulação de dados. Trabalha com estruturas como tabelas (DataFrames), séries temporais e arquivos CSV, Excel, entre outros.
+
+Instalação:
+
+``` bash
+pip install pandas
+```
+
+### numpy
+
+Fornece suporte a arrays, operações matemáticas e álgebra linear de forma rápida e eficiente. É a base para muitas bibliotecas científicas no Python.
+
+Instalação:
+
+``` bash
+pip install numpy
+```
+
+### matplotlib
+
+Utilizada para criar gráficos e visualizações de dados. Permite gerar gráficos de linha, barra, dispersão, histogramas e mais.
+
+Instalação:
+
+``` bash
+pip install matplotlib
+```
+
+### requests
+
+Facilita a realização de requisições HTTP, como acessar APIs ou páginas da internet, de forma simples e eficiente.
+
+Instalação:
+
+``` bash
+pip install requests
+```
+
+# Conceitos iniciais de Python:
+
+## Tipos de dados: interger, float, string, boolean:
+
+Um valor é uma das coisas básicas com as quais um programa trabalha, como uma letra ou um número. Esses valores pertencem a tipos diferentes: 2 é um número inteiro, 42.0 é um número de ponto flutuante e ‘Hello, World!’ é uma string (string é chamado assim pois são letras em uma sequência em cadeia).
+
+Para ter certeza dos tipos que esses valores assumem podemos pedir para o própio python dizer qual tipo cada um pertence:
+
+``` python
+print(type(4))
+> class 'int'
+print(type(21.0))
+> class 'float'
+print(type('Hello, World!'))
+> class 'str'
+print(type(TRUE))
+> class 'bool'
+```
+
+E ao colocar valores como '4' e '21.0', eles parecem números mas vão ser tratados como string por estarem entre aspas:
+
+``` python
+print(type('4'))
+> class 'str'
+print(type('21.0'))
+> class 'str'
+```
+
+Sintetizando tudo vamos ter os seguinte tipos de valores:
+
+| **Tipo**    | **Descrição**            | **Exemplo**              |
+|:------------|:-------------------------|:-------------------------|
+| **`int`**   | Números inteiros         | **`42`**, **`-7`**       |
+| **`float`** | Números decimais         | **`3.14`**, **`-0.001`** |
+| **`str`**   | Sequências de caracteres | **`"Python"`**           |
+| **`bool`**  | Valores booleanos        | **`True`**, **`False`**  |
+
+## Variáveis e operadores básicos:
+
+Uma variável é um nome que se refere a um valor. Uma instrução de atribuição cria uma nova variável e dá um valor a ela:
+
+``` python
+mensagem = 'relatório de python'
+n = 17
+pi = 3.141592
+```
+
+Esse exemplo faz três atribuições. A primeira atribuiu uma string a uma nova variável chamada mensagem; a segunda dá o número inteiro 17 a n; a terceira atribui o valor a pi.
+
+Uma forma comum de representar variáveis por escrito é colocar o nome com uma flecha apontando para o seu valor. Este tipo de número é chamado de diagrama de estado porque mostra o estado no qual cada uma das variáveis está:
+
+![ **Figura 1 – Diagrama de estado.**](images/Captura de tela 2025-07-24 202540.png){fig-align="center"}
+
+Programadores geralmente escolhem nomes objetivos para suas variáveis, isso ajuda a entender o propósito da variável no código.
+
+Os nomes de variáveis podem ter qualquer tamanho e podem incluir letras e números. No entanto, eles **não podem começar com um número**. Embora seja permitido usar letras maiúsculas, é comum utilizar apenas letras minúsculas para nomear variáveis.
+
+O caractere de sublinhado (`_`) também é permitido e costuma ser usado para separar palavras em nomes compostos, como em `nome_do_usuario` ou `relatorio_pip`.
+
+Caso você tente usar um nome inválido, o Python retornará um erro de sintaxe:
+
+``` python
+76trombones = 'big parade'
+>SyntaxError: invalid syntax
+
+more@ = 1000000
+>SyntaxError: invalid syntax
+
+class = 'Advanced Theoretical Zymurgy'
+>SyntaxError: invalid syntax
+```
+
+-   `76trombones` não é aceito porque começa com um número.
+
+<!-- -->
+
+-    `more@` é inválido porque o símbolo `@` não pode fazer parte de nomes de variáveis.
+
+-    Já `class` causa erro porque é uma palavra reservada da linguagem.
+
+Essas palavras reservadas têm significados especiais no Python e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.).
+
+Aqui estão as **palavras-chave** da linguagem Python 3:
+
+| Palavra-chave |           |          |            |
+|---------------|-----------|----------|------------|
+| `and`         | `del`     | `from`   | `None`     |
+| `as`          | `elif`    | `global` | `nonlocal` |
+| `assert`      | `else`    | `if`     | `not`      |
+| `break`       | `except`  | `import` | `or`       |
+| `class`       | `False`   | `in`     | `pass`     |
+| `continue`    | `finally` | `is`     | `raise`    |
+| `def`         | `for`     | `lambda` | `return`   |
+| `True`        | `try`     | `while`  | `with`     |
+| `yield`       |           |          |            |
+
+Os operadores +, -, \* e / executam a adição, a subtração, a multiplicação e a divisão como mostra os exemplos:
+
+``` python
+print(20 + 1) 
+>21
+print(22 - 1)
+>21 
+print(3 * 7)
+>21
+print(42 / 2)
+>21.0
+```
+
+## Listas, tuplas e dicionários:
+
+## Estruturas de controle: if, else, elif, for, while:
+
+## Funções: definição com def, parâmetros, retorno:
+
+## Importação de bibliotecas com import:
+
+## Boas práticas: comentários, nomes de variáveis, indentação:
 
 # Referências
 

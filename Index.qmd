@@ -1,9 +1,9 @@
 ---
-title: "Relatório Git Github e Python"
-subtitle: "Relatório para a disciplina de softwares estatísticos"
-author: "Daniel Aprígio Santos de Oliveira" # Autora
-lang: pt # Linguagem em português
-date: "`r format(Sys.Date())`" # Data do relatório
+title: "Primeira Avaliação: Relatório"
+subtitle: "Relatório em Quarto para a disciplina de softwares estatísticos"
+author: "Daniel Aprígio Santos de Oliveira" # Autor
+lang: pt-BR # Linguagem em português
+date: "2025-07-24" # Data do relatório
 date-format: short # Formato de data curto: dd/MM/yyyy 
 toc: true # Adiciona um índice no relatório
 editor: visual

@@ -1,10 +1,10 @@
-# 📄 Primeira Avaliação: Relatório em Quarto + GitHub
+#  Primeira Avaliação: Relatório em Quarto + GitHub
 
-## 🧠 Objetivo
+##  Objetivo
 
 Revisar conceitos de Git e GitHub, introduzir o uso do Quarto e promover uma leitura inicial sobre conceitos básicos de Python.
 
-## ✅ Atividade
+##  Atividade
 
 Você deverá:
 
@@ -18,7 +18,7 @@ Você deverá:
 
 - Dê preferência à geração em **HTML**, pois futuramente aprenderemos como hospedar essas páginas na web.
 
-> ⚠️ Atenção: alguns temas do Quarto geram mais de um arquivo (como imagens, arquivos `.css`, pastas auxiliares, etc). Todos esses arquivos devem ser incluídos no repositório do GitHub para que o relatório funcione corretamente.
+>  Atenção: alguns temas do Quarto geram mais de um arquivo (como imagens, arquivos `.css`, pastas auxiliares, etc). Todos esses arquivos devem ser incluídos no repositório do GitHub para que o relatório funcione corretamente.
 
 - **Versionar o projeto com Git e publicar no GitHub.**
 
@@ -26,7 +26,7 @@ Você deverá:
 
 ---
 
-### 🟠 Git e GitHub
+###  Git e GitHub
 
 - O que são;
 
@@ -39,7 +39,7 @@ Você deverá:
 
 ---
 
-### 🟣 pip
+###  pip
 
 - O que é o pip;
 
@@ -49,7 +49,7 @@ Você deverá:
 
 ---
 
-### 🔵 Conceitos iniciais de Python
+###  Conceitos iniciais de Python
 
 - Tipos de dados: `int`, `float`, `str`, `bool`;
 
@@ -67,7 +67,7 @@ Você deverá:
 
 ---
 
-## 🕐 Observações
+##  Observações
 
 - Será **online**.  
 - Usem os horários das aulas de amanhã para iniciar o trabalho e estudar os tópicos.

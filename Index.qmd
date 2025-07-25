@@ -93,7 +93,7 @@ Dessa forma, Git e GitHub, quando utilizados em conjunto, proporcionam um ambien
 
 1.  **`git init`**
 
-    -   Esse é o comando incial, ele cria a pasta `.git` que tem todos os arquivos para criar um repositório dentro na pasta do projeto.
+    -   O comando git init é o primeiro passo para começar a usar o Git em um projeto. Ele cria uma pasta oculta chamada .git dentro do seu diretório, que armazena todos os dados e configurações necessários para o versionamento.
 
 2.  **`git add`**
 
@@ -298,7 +298,7 @@ Esse exemplo faz três atribuições. A primeira atribuiu uma string a uma nova 
 
 Uma forma comum de representar variáveis por escrito é colocar o nome com uma flecha apontando para o seu valor. Este tipo de número é chamado de diagrama de estado porque mostra o estado no qual cada uma das variáveis está:
 
-![ **Figura 1 – Diagrama de estado.**](images/Captura de tela 2025-07-24 202540.png){fig-align="center"}
+![**Figura 1 – Diagrama de estado.**](images/Captura%20de%20tela%202025-07-24%20202540.png){fig-align="center"}
 
 Programadores geralmente escolhem nomes objetivos para suas variáveis, isso ajuda a entender o propósito da variável no código.
 
@@ -323,9 +323,9 @@ class = 'Advanced Theoretical Zymurgy'
 
 <!-- -->
 
--    `more@` é inválido porque o símbolo `@` não pode fazer parte de nomes de variáveis.
+-   `more@` é inválido porque o símbolo `@` não pode fazer parte de nomes de variáveis.
 
--    Já `class` causa erro porque é uma palavra reservada da linguagem.
+-   Já `class` causa erro porque é uma palavra reservada da linguagem.
 
 Essas palavras reservadas têm significados especiais no Python e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.).
 
@@ -358,25 +358,396 @@ print(42 / 2)
 
 ## Listas, tuplas e dicionários:
 
+### Listas (`list`):
+
+As **listas** são como caixas onde você pode guardar vários itens em uma ordem específica. Elas aceitam mudanças: dá pra adicionar, remover e alterar elementos quando quiser.
+
+Exemplo:
+
+``` python
+frutas = ["maçã", "banana", "laranja"] 
+print(frutas[0])  # mostra "maçã"  
+frutas.append("uva")  # adiciona "uva" 
+frutas[1] = "melancia"  # troca "banana" por "melancia" 
+```
+
+**Principais comandos:**
+
+-   `append()`: adiciona no final
+
+-   `remove()`: remove um valor
+
+-   `len(lista)`: mostra o tamanho
+
+-   Índices: `lista[0]`, `lista[-1]`, etc.
+
+### Tuplas (`tuple`):
+
+As **tuplas** são parecidas com listas, mas com um detalhe importante: não podem ser alteradas. Depois de criadas, ficam travadas. Por isso são boas pra guardar dados que não devem mudar.
+
+#### Exemplo:
+
+``` python
+coordenadas = (10, 20) 
+print(coordenadas[1])  # mostra 20 
+```
+
+É recomendado usar quando você quer garantir que os dados não sejam modificados por engano.
+
+### Dicionários (`dict`):
+
+Um **dicionário** se parece com uma lista, mas é mais geral. Em uma lista, os índices têm que ser números inteiros; em um dicionário, eles podem ser de (quase) qualquer tipo.
+
+Um dicionário contém uma **coleção de índices**, que se chamam chaves e uma coleção de valores. Cada chave é associada com um único valor. A associação de uma chave e um valor chama-se par chave-valor ou item.
+
+Dicionários são definidos entre chaves `{}` onde cada item é um par na forma de **chave:valor**, separados por `,`, sendo a chave e o valor podendo ser de qualquer tipo.
+
+**Chaves**:
+
+-   Devem ser **únicas**
+
+-   Tipo **imutável** (int, float, string, tuple, bool)
+
+-   Nenhuma ordem para chaves ou valores
+
+**Valores**:
+
+-   Qualquer tipo (**imutável** e **mutável**)
+
+-   Pode ser **duplicado**
+
+-   Valores de dicionários podem ser listas, até mesmo outros dicionários
+
+O código abaixo representa um exemplo de dicionário ao qual atribuímos a variável pessoa:
+
+``` python
+pessoa = {"nome": "Paulo", "idade": 29, "filhos": ["João", "Maria"]}
+```
+
 ## Estruturas de controle: if, else, elif, for, while:
 
-## Funções: definição com def, parâmetros, retorno:
+As instruções **`if`, `elif`** e **`else`** são usadas em Python para nos auxiliar na tomada de decisões. A tomada de decisão é um conceito muito importante da programação e representa a capacidade de executarmos determinados comandos apenas se condições especificadas forem satisfeitas.
+
+![](images/Conditionals.png){fig-align="center"}
+
+O **python** é capaz de suportar as condições lógicas tradicionais da matemática:
+
+-   Igualdade: `x == y`
+
+-   Diferente de: `x != y`
+
+-   Menor que: `x < y`
+
+-   Menor que ou igual a: `x <= y`
+
+-   Maior que: `x > y`
+
+-   Maior que ou igual a: `x >= y`
+
+A sintaxe para construirmos uma estrutura de tomada de decisão funciona então da seguinte forma:
+
+``` python
+if <expressão>:
+    <comandos>
+elif <expressão>:
+    <comandos>
+else:
+    <comandos>
+```
+
+Exemplo:
+
+``` python
+a = 100
+b = 20
+
+if b > a:
+    print("b é maior do que a")
+elif b == a:
+    print("b e a são iguais")
+else:
+    print("a é maior do que b")
+```
+
+O **for** loop em Python representa uma das formas mais comuns de estrutura de repetição, permitindo iterar sobre uma sequência de elementos e executar um bloco de código múltiplas vezes. Em Python, o for loop é muito flexível e pode iterar sobre listas, strings, tuplas, dicionários e outros iteráveis.
+
+Exemplo:
+
+``` python
+frutas = ['maçã', 'banana', 'cereja']
+for fruta in frutas:
+    print(fruta)
+
+> maça
+> banana
+> cereja
+```
+
+A sintaxe do **for** loop funciona da seguinte maneira:
+
+``` python
+valores = [10, 20, 30] 
+for valor in valores:     
+    print(f'O valor é: {valor}')
+
+> O valor é: 10
+> O valor é: 20
+> O valor é: 30
+```
+
+-   **Definição de um iterável**: no caso, criamos uma lista chamada `valores` com três elementos: 10, 20 e 30.
+
+-   **Início do for loop**: a linha ***for valor in valores:*** inicia o for loop. A variável ***`valor`*** armazena cada elemento da lista *valores* durante a iteração.
+
+-   **Bloco de código indentado**: a função ***print(f’O valor é: {valor}’)*** exibe o valor atual de ***`valor`*** na tela.
+
+O for loop continua a iterar até que todos os elementos da lista tenham sido processados. A indentação é crucial em Python, pois indica quais linhas de código pertencem ao bloco do for loop.
+
+O **while** é uma estrutura de repetição utilizada quando queremos que determinado bloco de código seja executado enquanto (do inglês while) determinada condição for satisfeita.
+
+Em outras palavras: só saia da estrutura de repetição quando a condição não for mais satisfeita.
+
+Sua sintaxe básica é:
+
+``` python
+while <condição>:
+    # Bloco a ser executado
+```
+
+Aqui, <condição> é uma expressão que pode ser reduzida à True ou False, podendo ser:
+
+-   A verificação do valor de uma variável
+
+-   Determinada estrutura de dados alcançar um tamanho
+
+-   O retorno de uma função se igualar a determinado valor
+
+-   Algum valor externo ser alterado (por exemplo um valor armazenado em Banco de Dados).
+
+Exemplo:
+
+``` python
+contador = 0
+
+while contador < 10:
+    print(f'Valor do contador é {contador}')
+    contador += 1
+```
+
+Resultando :
+
+``` python
+Valor do contador é 1
+Valor do contador é 2
+Valor do contador é 3
+Valor do contador é 4
+Valor do contador é 5
+Valor do contador é 6
+Valor do contador é 7
+Valor do contador é 8
+Valor do contador é 9
+Valor do contador é 10
+```
+
+Ou seja, a variável `contador` está sendo incrementada a cada vez que o while executa seu código.
+
+Quando ele alcançar o valor 10, a condição `contador < 10` não será mais satisfeita, finalizando o bloco while.
+
+## Funções: def, parâmetros, retorno:
+
+Uma **função** é um bloco de código **organizado** e **reutilizável** que é capaz de realizar uma **determinada ação**. Funções nos ajudam a deixar o nosso código mais **modular**, trazendo a possibilidade de **reusabilidade**, conforme nosso programa fica cada vez maior, as funções o tornam mais organizado e gerenciável.
+
+As funções seguem algumas regras, sendo elas:
+
+1.  Para criar uma nova função em Python, a palavra reservada **def** é utilizada.
+
+2.  Em seguida, é atribuído um **nome** ao identificador que será usado para chamá-la.
+
+3.  Depois do nome, uma lista opcional de **parâmetros** é incluída entre parênteses.
+
+4.  O cabeçalho da função termina com **dois pontos**.
+
+5.  Nas linhas seguintes, com uma indentação maior vem o corpo da função, ou seja, uma sequência de sentenças que executam uma operação.
+
+6.  Por último, opcionalmente, é adicionada a palavra reservada **return** para devolver um resultado.
+
+A sintaxe da função funciona da seguinte maneira:
+
+``` python
+def nome (parâmetro):
+bloco de código
+return
+```
+
+Os parâmetros de input ou argumentos (dados fornecidos por nós) devem ser colocados entre parenteses `()`, eles determinam os valores das variáveis que estão contidas dentro do bloco de código, porém eles são opcionais.
+
+Podemos definir **parâmetros padrão** para caso a função seja invocada sem nenhum argumento passado, estes preencherão as opções:
+
+``` python
+def padrao(valor=100):
+    #Função que apenas imprime um valor
+    print("O valor definido foi: " + str(valor))
+    
+padrao() # 100
+padrao(10) # 10
+padrao(33) # 33
+```
+
+O comando **return** nos permite fazer com que a função retorne um valor e possamos armazená-lo em uma variável, por exemplo:
+
+``` python
+def func(x):
+    return x + 1 
+y = func(1)
+z = func(2)
+print(y) # 2
+print(z) # 3
+```
 
 ## Importação de bibliotecas com import:
 
-## Boas práticas: comentários, nomes de variáveis, indentação:
+**Biblioteca** é um arquivo que contém definições e comandos/instruções **Python**.
+
+Uma biblioteca (também chamada de módulo) pode conter tanto instruções executáveis quanto definições de funções e classes. Essas instruções servem para inicializar o módulo. Eles são executados somente na primeira vez que a biblioteca é encontrado em uma instrução de importação.
+
+Podemos imaginar um módulo como um conjunto de ferramentas disponíveis para usarmos para solucionar determinados problemas.
+
+Supomos que temos um módulo chamado **matematica**. Os principais formatos para **importarmos** nossos módulos são:
+
+``` python
+import matematica
+```
+
+-   Tudo que está no módulo **matematica** é importado
+
+-   Para se referir aos métodos de matematica, adicionamos o prefixo "matematica" em frente ao seu nome
+
+``` python
+matematica.nomeclasse.metodo()
+matematica.funcao()
+```
+
+Importando usando o asterisco `*`:
+
+``` python
+from matematica import *
+```
+
+-   Tudo no módulo matematica é importado
+
+-   Para se referir a qualquer método no módulo, basta usar seu nome, sem precisarmos prefixar
+
+-   Lembre de ter atenção ao usar esse tipo de import, pois ele pode sobrescrever a definição de uma variável ou função já existente
+
+``` python
+nomeclasse.metodo()
+funcao()
+```
+
+Importando uma classe ou função específica:
+
+``` python
+from matematica import nomeclasse
+```
+
+-   Apenas o item **nomeclasse** será importado
+
+-   Após importar **nomeclasse** você pode usar ele sem o prefixo do módulo, ele é colocado no namespace atual
+
+-   Tome cuidado ao usar, pois pode sobrescrever a definição do nome, caso ele já esteja no namespace
+
+``` python
+nomeclasse.metodo()
+funcao()
+```
+
+Além de funções, os módulos também podem conter variáveis e estruturas de dados (listas, tuplas, dicionários, objetos). Vamos então criar mais um módulo para testarmos, nomearemos o nosso arquivo como `estudantes.py`.
+
+``` python
+estudantes = [
+    {'nome':'Uriel','idade':27,'aprovado':True},
+    {'nome':'Emanuel','idade':25,'aprovado':True},
+    {'nome':'Malthael','idade':29,'aprovado':False}
+]
+def imprimir_aprovados():
+    for estudante in estudantes:
+        if estudante['aprovado']:
+            print(f'{estudante["nome"]} está aprovado')
+```
+
+Iremos agora importar o módulo **estudantes** e podemos acessar a lista de dicionários **estudantes**, perceba que fornecemos o mesmo nome para ambos, mas isso é uma escolha livre que temos. Também temos acesso a função para imprimir os estudantes que estão aprovados.
+
+``` python
+from estudantes import *
+
+estudante = estudantes[2]['nome']
+print(estudante) # Malthael
+```
+
+Podemos dar um apelido para um módulo, tornando-o mais fácil de nos referirmos a ele, para isso usamos a palavra-chave **as**:
+
+``` python
+import estudantes as e
+
+print(e.estudantes[0]['idade']) # 27
+e.imprimir()
+# Uriel está aprovado
+# Emanuel está aprovado
+```
+
+## Boas práticas: comentários, indentação:
+
+Ao programar em Python, seguir boas práticas de escrita de código é essencial para garantir **legibilidade, manutenção e clareza**. Essas práticas facilitam tanto o entendimento por outras pessoas quanto a reutilização futura do próprio código.
+
+### Comentários
+
+Comentários são linhas de texto que servem para **explicar trechos do código**, facilitando a compreensão da lógica implementada. Em Python, eles são feitos utilizando o símbolo `#` no início da linha. Comentários não são executados pelo interpretador.
+
+**Exemplo:**
+
+``` python
+# Calcula a área de um círculo 
+raio = 5 
+area = 3.14 * raio**2 
+```
+
+Comentários devem ser usados de forma objetiva e com moderação, explicando **por que algo é feito**, especialmente quando a lógica não é óbvia.
+
+### Indentação
+
+Python utiliza a **indentação** (recuo do código) para definir blocos de comandos, como os que aparecem dentro de estruturas condicionais, laços de repetição e funções. A indentação é obrigatória e, por convenção, deve ter **quatro espaços por nível**.
+
+**Exemplo correto:**
+
+``` python
+if idade >= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")    
+```
+
+**Exemplo incorreto:**
+
+``` python
+if idade >= 18:
+print("Maior de idade")  # erro de indentação
+```
+
+A indentação adequada contribui para a clareza e organização do código, além de evitar erros de sintaxe.
+
+# Conclusão
+
+Vimos os primeiros passos no mundo da programação com Python e também conhecemos ferramentas importantes que fazem parte do dia a dia de quem desenvolve projetos com código.
+
+Foi mostrado como criar e usar variáveis, listas, tuplas e dicionários — formas diferentes de guardar e organizar informações. Também vimos como usar estruturas de controle, como `if`, `for` e `while`, que ajudam o programa a tomar decisões e repetir tarefas. As funções entraram como uma forma de deixar o código mais organizado e reutilizável.
+
+Além disso, foi explorado o uso do `pip`, a ferramenta que permite instalar pacotes e bibliotecas em Python de forma prática. Isso é essencial para aproveitar recursos prontos.
+
+Por fim, conhecemos o Git e o GitHub. O Git nos ajuda a controlar o que mudou no nosso código com o tempo, e o GitHub permite salvar esses projetos online, compartilhar com outras pessoas e trabalhar em equipe com segurança.
+
+No geral, vimos que programar envolve tanto escrever o código em si quanto cuidar bem do projeto: manter tudo organizado, bem comentado e versionado. Com esses conceitos, já dá pra começar a desenvolver com mais confiança e estrutura.
 
 # Referências
 
 ::: {#refs}
 :::
-
-1.  blablabla
-
--   alguma coisa **muita coisa** *italico*
-
-``` bash
-git --version
-```
-
-`git` é uma blablablu

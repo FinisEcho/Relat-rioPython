@@ -1,74 +1,76 @@
-Primeira Avaliação: Relatório em Quarto + GitHub
+# 📄 Primeira Avaliação: Relatório em Quarto + GitHub
 
-Será online. Usem os horários das aulas de amanhã para iniciar o trabalho e estudar os tópicos.
+## 🧠 Objetivo
 
-Objetivo: Revisar conceitos de Git e GitHub, introduzir o uso do Quarto e promover uma leitura inicial sobre conceitos básicos de Python.
+Revisar conceitos de Git e GitHub, introduzir o uso do Quarto e promover uma leitura inicial sobre conceitos básicos de Python.
 
+## ✅ Atividade
 
 Você deverá:
 
-Criar um relatório com o Quarto usando um dos modelos disponíveis:
+- Criar um relatório com o **Quarto** usando um dos modelos disponíveis:
 
-Galeria de modelos: https://quarto.org/docs/gallery/
+  - Galeria de modelos: https://quarto.org/docs/gallery/
 
-Exemplo sugerido: Tufte-style
+  - Exemplo sugerido: Tufte-style
 
-Código do exemplo: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
+  - Código do exemplo: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
 
-Dê preferência à geração em HTML, pois futuramente aprenderemos como hospedar essas páginas na web.
+- Dê preferência à geração em **HTML**, pois futuramente aprenderemos como hospedar essas páginas na web.
 
-?? Atenção: alguns temas do Quarto geram mais de um arquivo (como imagens, arquivos .css, pastas auxiliares, etc). Todos esses arquivos devem ser incluídos no repositório do GitHub para que o relatório funcione corretamente.
+> ⚠️ Atenção: alguns temas do Quarto geram mais de um arquivo (como imagens, arquivos `.css`, pastas auxiliares, etc). Todos esses arquivos devem ser incluídos no repositório do GitHub para que o relatório funcione corretamente.
 
-Versionar o projeto com Git e publicar no GitHub;
+- **Versionar o projeto com Git e publicar no GitHub.**
 
-Explicar brevemente os seguintes tópicos:
+- **Explicar brevemente os seguintes tópicos:**
 
-Git e GitHub:
+---
 
-O que são;
+### 🟠 Git e GitHub
 
-Para que servem;
+- O que são;
 
-Comandos básicos: git init, git add, git commit, git push, git pull, git clone;
+- Para que servem;
 
-O que é um repositório e um commit.
+- Comandos básicos:  
+  `git init`, `git add`, `git commit`, `git push`, `git pull`, `git clone`;
 
-pip:
+- O que é um repositório e um commit.
 
-O que é o pip;
+---
 
-Como instalar pacotes com pip install;
+### 🟣 pip
 
-Exemplos de bibliotecas populares: pandas, numpy, matplotlib, requests.
+- O que é o pip;
 
-Conceitos iniciais de Python:
+- Como instalar pacotes com `pip install`;
 
-Tipos de dados: int, float, str, bool;
+- Exemplos de bibliotecas populares: `pandas`, `numpy`, `matplotlib`, `requests`.
 
-Variáveis e operadores básicos;
+---
 
-Listas, tuplas e dicionários;
+### 🔵 Conceitos iniciais de Python
 
-Estruturas de controle: if, else, elif, for, while;
+- Tipos de dados: `int`, `float`, `str`, `bool`;
 
-Funções: definição com def, parâmetros, retorno;
+- Variáveis e operadores básicos;
 
-Importação de bibliotecas com import;
+- Listas, tuplas e dicionários;
 
-Boas práticas: comentários, nomes de variáveis, indentação.
+- Estruturas de controle: `if`, `else`, `elif`, `for`, `while`;
 
-Entrega
-A prova será online e poderá ser feita de casa.
+- Funções: definição com `def`, parâmetros, retorno;
 
-Crie um repositório no GitHub;
+- Importação de bibliotecas com `import`;
 
-Adicione o arquivo .qmd, o HTML gerado e todos os arquivos necessários para o funcionamento da página;
+- Boas práticas: comentários, nomes de variáveis, indentação.
 
-Inclua um README.md com descrição do projeto;
+---
 
-Envie o link do repositório do GitHub pela plataforma da disciplina.
+## 🕐 Observações
 
-Data de entrega: até o dia 24/07/2025 às 23h59.
+- Será **online**.  
+- Usem os horários das aulas de amanhã para iniciar o trabalho e estudar os tópicos.
 
 Importante: trabalhos enviados antes do dia 24 ou após o dia 24 não serão aceitos. O trabalho deverá obrigatoriamente ser entregue no dia 24/07/2025.
 
